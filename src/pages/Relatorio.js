@@ -4,10 +4,10 @@ import { Container, Header, Left, Body, Right, Button, Icon, Title, Content } fr
 
 const { height, width } = Dimensions.get('window');
 
-export default class ResumeScreen extends React.Component {
+export default class RelatorioScreen extends React.Component {
 
     static navigationOptions = {
-      drawerLabel: 'Início',
+      drawerLabel: 'Relatorio',
       header: null,
     };
     render() {
@@ -16,43 +16,22 @@ export default class ResumeScreen extends React.Component {
         <Container>
           <Header style={styles.header}>
             <Left>
-              <Button transparent
-                onPress={() => this.props.navigation.navigate('DrawerToggle')}
-              >
+              <Button transparent>
                 <Icon name='menu' />
               </Button>
             </Left>
             <Body>
-              <Title>iHelper</Title>
+              <Title>Relatorio</Title>
             </Body>
             <Right>
             </Right>
           </Header>
           <Content>
-            <View style={styles.user}>
-              <Image style={styles.avatar} source={require('../img/avatar.png')} />
-              <Text>João Paulo</Text>
-            </View>
-            <View style={styles.dashboard}>
-              <Text style={styles.title}>Gráfico de Clientes</Text>
-              <View style={styles.graphcenter}>
-                <Image style={styles.graph} source={require('../img/graph.png')} />
-              </View>
+            <View style={styles.ads}>
+              <Image style={styles.ad} source={require('../img/graphrel1.jpg')}/>
             </View>
             <View style={styles.ads}>
-              <Image style={styles.ad} source={require('../img/ad.jpg')}/>
-            </View>
-            <View style={styles.placeContainer}>
-              <View style={styles.place}>
-                <Text>João Paulo</Text>
-                <Text>Sempre disponível</Text>
-                <Text>Já trabalhou numa loja de consertos</Text>
-                <Text>Endereço: Rua Cosmo e Damião</Text>
-                <Text>Contato: (85)11111-1111</Text>
-                <TouchableOpacity style={styles.call}>
-                  <Text style={styles.textLight}>Editar</Text>
-                </TouchableOpacity>
-              </View>
+              <Image style={styles.ad} source={require('../img/graphrel2.jpg')}/>
             </View>
           </Content>
         </Container>
@@ -91,6 +70,9 @@ export default class ResumeScreen extends React.Component {
       alignItems: 'center',
       justifyContent: 'center',
       height: 100,
+      marginTop: '20%',
+      flex: 1,
+      marginBottom: '25%',
     },
     ad: {
       position: 'relative',
